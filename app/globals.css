@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary: var(--on-primary);
+  --color-surface: var(--surface);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+}
+
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --primary: #059669; /* emerald-600 */
+    --primary-container: #10b981; /* emerald-500 */
+    --on-primary: #ffffff;
+    --surface: #f8fafc; /* slate-50 */
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #f1f5f9; /* slate-100 */
+    --surface-container: #e2e8f0; /* slate-200 */
+    --surface-container-high: #cbd5e1; /* slate-300 */
+    --surface-container-highest: #94a3b8; /* slate-400 */
+    --on-surface: #0f172a; /* slate-900 */
+    --on-surface-variant: #475569; /* slate-600 */
+    --outline: #94a3b8;
+    --outline-variant: #cbd5e1;
+  }
+
+  .dark {
+    /* Dark Mode Colors */
+    --primary: #4edea3;
+    --primary-container: #10b981;
+    --on-primary: #003824;
+    --surface: #131315;
+    --surface-container-lowest: #0e0e10;
+    --surface-container-low: #1c1b1d;
+    --surface-container: #201f22;
+    --surface-container-high: #2a2a2c;
+    --surface-container-highest: #353437;
+    --on-surface: #e5e1e4;
+    --on-surface-variant: #bbcabf;
+    --outline: #86948a;
+    --outline-variant: #3c4a42;
+  }
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Utilities */
+.glass-panel {
+  background-color: var(--surface-container-low);
+  border: 1px solid var(--outline-variant);
+  backdrop-filter: blur(12px);
+}
+
+.emerald-glow {
+  box-shadow: 0 0 40px -10px var(--primary-container);
+}
