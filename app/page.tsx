@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowRight, BadgeCheck, Code2, Database, Network, Server, Terminal } from "lucide-react";
+import myPhoto from "./assets/images/my-photo.jpeg";
 
 export default function Home() {
   return (
@@ -77,7 +78,7 @@ export default function Home() {
         <div className="relative w-full h-full rounded-3xl overflow-hidden glass-panel border-primary/30 p-2">
           <div className="w-full h-full rounded-2xl overflow-hidden relative bg-surface-container-low">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiezOkyVpB9dxUs5adHpCz-sDxL_7w1fQWHJcONvbvq4xIxg3JcRLZQzwCyCo0apCIViIRcMz9-WVaw2F0wVZ_BAtY-oNe2Qu-oT5hfsolfmWpdPQCQOJO2CElSc655X81ueEK7oDkYAZ3wcE6Rj0G0bDmtp50ifirUhWfkJN7StDWngWvgxDnXMuR6ssgLqMonTPfkN-wMDp2XB_KZZ7fdFz96bbhrbkcmqdYDaC7VVjmVbHisg2KUjXvpk_ZxvCFouSbAFyhiNk"
+              src={myPhoto}
               alt="Mainul Hasan"
               fill
               className="object-cover"
@@ -98,7 +99,7 @@ export default function Home() {
             <BadgeCheck size={24} />
           </div>
           <div>
-            <p className="text-2xl font-bold text-on-surface">5+</p>
+            <p className="text-2xl font-bold text-on-surface">4+</p>
             <p className="text-xs text-on-surface-variant uppercase tracking-wider">Years Exp</p>
           </div>
         </motion.div>
